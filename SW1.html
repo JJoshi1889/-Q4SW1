@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <p>Convert 100 Pesos to:</p>
+        <button onclick="convertToDollar()">Dollars</button>
+        <button onclick="convertToEuro()">Euro</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        function convertToDollar() {
+            var dollarRate = 0.020;
+
+            var pesos = 100;
+            var dollars = pesos * dollarRate;
+
+            document.getElementById("results").innerHTML = "<p>100 Pesos is equal to " + dollars.toFixed(2) + " Dollars.</p>";
+        }
+
+        function convertToEuro() {
+            var euroRate = 0.018;
+
+            var pesos = 100;
+            var euros = pesos * euroRate;
+
+            document.getElementById("results").innerHTML = "<p>100 Pesos is equal to " + euros.toFixed(2) + " Euros.</p>";
+        }
+    </script>
+</body>
+</html>
